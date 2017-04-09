@@ -21,13 +21,13 @@ app.set('view engine','html');
 app.set('views',path.join(__dirname,'views'));
 
 //accepts a route '/inverstors' and display a table of investors on template of your choice
-app.get('/investors',(req,res)=>{
+app.get('/inventors',(req,res)=>{
     //use json data from inverstors.json
-    const filePath = path.join(__dirname,'data/investors.json');
+    const filePath = path.join(__dirname,'data/inventors.json');
     
     var obj = JSON.parse(fs.readFileSync(filePath,'utf8'));
-    var investors = {"investors" : obj};
-    res.render('investors',{"investors" : obj});
+    // var investors = {"investors" : obj};
+    res.render('inventors',{"inventors" : obj});
 });
 
 
