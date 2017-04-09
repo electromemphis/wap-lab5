@@ -13,6 +13,8 @@ app.enable('case sensitive routing');
 app.enable('strict routing');
 //should run fluently behind a proxy w/o revealing framework name to clients
 app.set('x-powered-by',false);
+app.set('trust proxy',true);
+app.set('view cache',true);
 
 app.engine('html',cons.swig);
 app.set('view engine','html');
